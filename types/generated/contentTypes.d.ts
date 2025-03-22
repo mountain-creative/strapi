@@ -373,6 +373,7 @@ export interface ApiCustomerSupportAgentTutorialCustomerSupportAgentTutorial
   extends Struct.CollectionTypeSchema {
   collectionName: 'customer_support_agent_tutorials';
   info: {
+    description: '';
     displayName: 'customer-support-agent-tutorial';
     pluralName: 'customer-support-agent-tutorials';
     singularName: 'customer-support-agent-tutorial';
@@ -386,7 +387,7 @@ export interface ApiCustomerSupportAgentTutorialCustomerSupportAgentTutorial
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
-    image_url: Schema.Attribute.String;
+    image_url: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -394,7 +395,7 @@ export interface ApiCustomerSupportAgentTutorialCustomerSupportAgentTutorial
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

@@ -4,20 +4,21 @@
   "info": {
     "singularName": "customer-support-agent-tutorial",
     "pluralName": "customer-support-agent-tutorials",
-    "displayName": "customer-support-agent-tutorial"
+    "displayName": "customer-support-agent-tutorial",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "text"
     },
     "description": {
       "type": "text"
     },
     "image_url": {
-      "type": "string"
+      "type": "text"
     },
     "content": {
       "type": "richtext"
