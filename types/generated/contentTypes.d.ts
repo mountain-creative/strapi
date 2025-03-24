@@ -456,6 +456,7 @@ export interface ApiOmega3ContactUsOmega3ContactUs
       'api::omega3-contact-us.omega3-contact-us'
     > &
       Schema.Attribute.Private;
+    marked: Schema.Attribute.String;
     message: Schema.Attribute.RichText;
     name: Schema.Attribute.Text;
     organization: Schema.Attribute.Text;

@@ -31,6 +31,9 @@
     },
     "message": {
       "type": "richtext"
+    },
+    "marked": {
+      "type": "string"
     }
   }
 }
