@@ -437,6 +437,7 @@ export interface ApiOmega3ContactUsOmega3ContactUs
   extends Struct.CollectionTypeSchema {
   collectionName: 'omega3_contact_uses';
   info: {
+    description: '';
     displayName: 'omega3-contact-us';
     pluralName: 'omega3-contact-uses';
     singularName: 'omega3-contact-us';
@@ -458,7 +459,7 @@ export interface ApiOmega3ContactUsOmega3ContactUs
     message: Schema.Attribute.RichText;
     name: Schema.Attribute.Text;
     organization: Schema.Attribute.Text;
-    phonr: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     query: Schema.Attribute.Text;
     region: Schema.Attribute.String;

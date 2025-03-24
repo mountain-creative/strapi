@@ -4,7 +4,8 @@
   "info": {
     "singularName": "omega3-contact-us",
     "pluralName": "omega3-contact-uses",
-    "displayName": "omega3-contact-us"
+    "displayName": "omega3-contact-us",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,7 +17,7 @@
     "organization": {
       "type": "text"
     },
-    "phonr": {
+    "phone": {
       "type": "string"
     },
     "email": {
