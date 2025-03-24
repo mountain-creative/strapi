@@ -402,6 +402,37 @@ export interface ApiCustomerSupportAgentTutorialCustomerSupportAgentTutorial
   };
 }
 
+export interface ApiNaturalgodocNaturalgodoc
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'naturalgodocs';
+  info: {
+    displayName: 'naturalgodoc';
+    pluralName: 'naturalgodocs';
+    singularName: 'naturalgodoc';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::naturalgodoc.naturalgodoc'
+    > &
+      Schema.Attribute.Private;
+    page_name: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    text: Schema.Attribute.RichText;
+    title: Schema.Attribute.Text;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOmega3BlogOmega3Blog extends Struct.CollectionTypeSchema {
   collectionName: 'omega3_blogs';
   info: {
@@ -1009,6 +1040,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::customer-support-agent-tutorial.customer-support-agent-tutorial': ApiCustomerSupportAgentTutorialCustomerSupportAgentTutorial;
+      'api::naturalgodoc.naturalgodoc': ApiNaturalgodocNaturalgodoc;
       'api::omega3-blog.omega3-blog': ApiOmega3BlogOmega3Blog;
       'api::omega3-contact-us.omega3-contact-us': ApiOmega3ContactUsOmega3ContactUs;
       'api::omega3-newsletter-subscriber.omega3-newsletter-subscriber': ApiOmega3NewsletterSubscriberOmega3NewsletterSubscriber;
