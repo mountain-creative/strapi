@@ -433,6 +433,41 @@ export interface ApiOmega3BlogOmega3Blog extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiOmega3ContactUsOmega3ContactUs
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'omega3_contact_uses';
+  info: {
+    displayName: 'omega3-contact-us';
+    pluralName: 'omega3-contact-uses';
+    singularName: 'omega3-contact-us';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::omega3-contact-us.omega3-contact-us'
+    > &
+      Schema.Attribute.Private;
+    message: Schema.Attribute.RichText;
+    name: Schema.Attribute.Text;
+    organization: Schema.Attribute.Text;
+    phonr: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    query: Schema.Attribute.Text;
+    region: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOmega3NewsletterSubscriberOmega3NewsletterSubscriber
   extends Struct.CollectionTypeSchema {
   collectionName: 'omega3_newsletter_subscribers';
@@ -973,6 +1008,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::customer-support-agent-tutorial.customer-support-agent-tutorial': ApiCustomerSupportAgentTutorialCustomerSupportAgentTutorial;
       'api::omega3-blog.omega3-blog': ApiOmega3BlogOmega3Blog;
+      'api::omega3-contact-us.omega3-contact-us': ApiOmega3ContactUsOmega3ContactUs;
       'api::omega3-newsletter-subscriber.omega3-newsletter-subscriber': ApiOmega3NewsletterSubscriberOmega3NewsletterSubscriber;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

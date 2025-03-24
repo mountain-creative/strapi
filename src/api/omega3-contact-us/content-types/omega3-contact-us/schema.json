@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "omega3_contact_uses",
+  "info": {
+    "singularName": "omega3-contact-us",
+    "pluralName": "omega3-contact-uses",
+    "displayName": "omega3-contact-us"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "text"
+    },
+    "organization": {
+      "type": "text"
+    },
+    "phonr": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "query": {
+      "type": "text"
+    },
+    "region": {
+      "type": "string"
+    },
+    "message": {
+      "type": "richtext"
+    }
+  }
+}
